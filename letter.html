@@ -1,0 +1,76 @@
+{% extends "./wrapper.html" %}{% load actionkit_tags %}
+
+{% block content %}
+
+<form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8">
+    <input type="hidden" name="page" value="{{ page.name }}">
+
+    <div class="ak-grid-row">
+
+        <div class="ak-grid-col ak-grid-col-4-of-12 align-right">
+        
+            <h2 class="ak-dp-mobile">{{ page.title }}</h2>
+        
+            {% if page.custom_fields.featured_image %}
+            <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
+            {% endif %}
+
+            <div class="ak-sticky-parent">
+				<div class="ak-sticky">
+					<div id="letter-form" class="ak-field-box ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
+					
+					 <div class="ak-margin-bottom-1 ak-styled-fields">
+					 
+						{% if form.statement_leadin %}
+						{% autoescape off %}
+						<div class="ak-p-before-textarea ak-margin-top-1">
+							{% include_tmpl form.statement_leadin %}
+						</div>
+						{% endautoescape %}
+						{% else %}
+						<h3>Send the letter</h3>
+						{% endif %}
+						<div class="ak-margin-top-1">
+						{% include "./user_form_wrapper.html" %}
+   						</div>   
+		
+						<b>The Letter:</b>
+						<textarea id="id_comment" name="action_comment" class="ak-letter-text ">{% include_tmpl form.letter_text escaped %}</textarea>
+		
+						{# Optional TAF {% include "./inline_tellafriend.html" %} #}
+		
+						<button type="submit" class="ak-submit-button">Send Letter</button>
+						
+						<p class="legal_text">
+    						{% if page.custom_fields.legal_text %}
+	    						{{ page.custom_fields.legal_text }}
+							{% else %}
+						We do not share your email address without your permission. We may send you updates on this and other important campaigns by email. If at any time you would like to unsubscribe from our email list, you may do so.
+	                        {% endif %}
+						</p>
+		
+						</div>
+					</div>
+					{% include "./progress_meter.html" %}
+				</div>
+            </div>
+        </div>
+
+        <div class="ak-grid-col ak-grid-col-8-of-12 align-left">
+            <h2 class="ak-dp-desktop">{{ page.title }}</h2>
+            <div id="letter-story">
+                {% autoescape off %}
+                <div>{% include_tmpl form.about_text %}</div>
+                {% endautoescape %}
+            </div>
+            <div class="click-here-to-sign">
+				<a href="javascript:SetFocus();">Click here to sign</a>
+			</div>
+            
+        </div>
+
+    </div>
+
+</form>
+
+{% endblock %}

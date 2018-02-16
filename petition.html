@@ -1,0 +1,94 @@
+{% extends "./wrapper.html" %}{% load actionkit_tags %}
+
+{% block content %}
+<form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8">
+    <input type="hidden" name="page" value="{{ page.name }}">
+
+    <div class="ak-grid-row">
+        <div class="ak-grid-col ak-grid-col-12-of-12">
+            <h2 class="ak-dp-mobile">{{ page.title }}</h2>
+        </div>
+    </div>
+
+    <div class="ak-grid-row">
+         <div class="ak-grid-col ak-grid-col-4-of-12 align-right">
+            <div class="ak-sticky-parent">
+				<div class="ak-sticky">             
+					<div class="statement-text-wrapper ak-field-box">
+		
+								{% if form.statement_leadin %}
+									<h3>
+										{% include_tmpl form.statement_leadin %}
+									</h3>
+								{% else %}
+									<h3>
+										Sign the petition:
+									</h3>
+								{% endif %}
+						
+						<div id="petition-form" class="ak-styled-fields ak-margin-top-1 {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
+							{% include "./user_form_wrapper.html" %}
+							{% if page.custom_fields.allow_comments %}
+								<div class="ak-field">
+									<label for="id_comment">Comment</label>
+									<textarea id="id_comment" name="action_comment"></textarea>
+								</div>
+							{% endif %}
+		
+							{# Optional TAF {% include "./inline_tellafriend.html" %} #}
+		
+							<button type="submit" class="ak-submit-button">Sign</button>
+		
+							<p class="legal_text">
+								{% if page.custom_fields.legal_text %}
+									{{ page.custom_fields.legal_text }}
+								{% else %}
+									We do not share your email address without your permission. We may send you updates on this and other important campaigns by email. If at any time you would like to unsubscribe from our email list, you may do so.
+								{% endif %}
+                            </p>
+		
+						</div>
+					</div>
+                
+                {% include "./progress_meter.html" %}
+                </div>
+                
+            </div>  
+        </div>
+
+
+       <div class="ak-grid-col ak-grid-col-8-of-12  align-left">
+            {% if page.custom_fields.featured_image or form.about_text %}
+            <div id="ak-petition-story">
+                <h2 class="ak-dp-desktop">{{ page.title }}</h2>
+                {% if page.custom_fields.featured_image %}
+                <img class="ak-featured-img {% if page.goal %}ak-margin-top-1{% endif %}" src="{{page.custom_fields.featured_image}}">
+                {% endif %}
+
+                        <div class="ak-margin-bottom-1 dp-petition">
+                            {% include_tmpl form.statement_text %}
+                        </div>
+                        
+                {% autoescape off %}
+                    <div >{% include_tmpl form.about_text %}</div>
+                {% endautoescape %}
+            </div>
+             {% else %}
+                <h2 class="ak-dp-desktop">{{ page.title }}</h2>
+                 {% if form.statement_text %}
+                        <div class="ak-margin-bottom-1 dp-petition">
+                            {% include_tmpl form.statement_text %}
+                        </div>
+                {% endif %}
+             {% endif %}
+			<div class="click-here-to-sign">
+				<a href="javascript:SetFocus();">Click here to sign</a>
+			</div>
+        </div>
+
+
+    </div><!--gridrow-->
+
+</form>
+
+{% endblock %}
