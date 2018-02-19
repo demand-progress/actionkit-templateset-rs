@@ -85,7 +85,7 @@ a.ak-underline-on-hover:hover{
 }
  
 .ak-page-header{
-	border-bottom:24px solid #a11411;
+	border-bottom:24px solid #0099ff;
 	height: 72px;
     padding-top: 4px;
     background:#fff;
@@ -93,7 +93,7 @@ a.ak-underline-on-hover:hover{
 
 @media screen and (max-width: 500px){
     .ak-page-header{
-	    border-bottom:8px solid #a11411;
+	    border-bottom:8px solid #0099ff;
 	    height: 46px;
     }
 }
@@ -102,7 +102,7 @@ a.ak-underline-on-hover:hover{
     background: url('https://s3.amazonaws.com/demandprogress/images/rootstrikers-logo.png');
     background-repeat: no-repeat;
     text-indent:-9999px;
-    background-size:400px;
+    background-size:300px;
     transition: width 2s linear 1s;
     margin-top: 0;
 }
