@@ -86,7 +86,7 @@ a.ak-underline-on-hover:hover{
  
 .ak-page-header{
 	border-bottom:24px solid #0099ff;
-	height: 72px;
+	height: 85px;
     padding-top: 4px;
     background:#fff;
 }
@@ -94,7 +94,7 @@ a.ak-underline-on-hover:hover{
 @media screen and (max-width: 500px){
     .ak-page-header{
 	    border-bottom:8px solid #0099ff;
-	    height: 46px;
+	    height: 50px;
     }
 }
 
@@ -102,7 +102,7 @@ a.ak-underline-on-hover:hover{
     background: url('https://s3.amazonaws.com/demandprogress/images/rootstrikers-logo.png');
     background-repeat: no-repeat;
     text-indent:-9999px;
-    background-size:300px;
+    background-size:250px;
     transition: width 2s linear 1s;
     margin-top: 0;
 }
@@ -113,7 +113,7 @@ a.ak-underline-on-hover:hover{
     }
 
     .ak-page-header-contents h1{
-        background-size:210px;
+        background-size:140px;
         transition: width 2s linear 1s;
         margin-top: 0;
         background-position-x: center;
@@ -221,7 +221,7 @@ button{
 
 .ak-pagetype-petition .statement-text-wrapper.ak-field-box
 {
-    border: 1px solid #0099ff;
+    border: 1px solid #00426e;
 }
 
 .ak-pagetype-letter .ak-grid-col:first-child,
