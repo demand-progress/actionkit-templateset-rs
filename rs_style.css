@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-    color: #9f1719;
+    color: #0099ff;
     text-decoration: none;
     border-bottom: 0;
 }
@@ -99,7 +99,7 @@ a.ak-underline-on-hover:hover{
 }
 
 .ak-page-header-contents h1{
-    background: url('https://s3.amazonaws.com/demandprogress/images/Demand-Progress-logo-600x60.png');
+    background: url('https://s3.amazonaws.com/demandprogress/images/rootstrikers-logo.png');
     background-repeat: no-repeat;
     text-indent:-9999px;
     background-size:400px;
@@ -126,7 +126,7 @@ a.ak-underline-on-hover:hover{
 .ak-page-header a,.ak-page-header a:hover{ border-bottom: 0;}
 
 h2 {
-    color: #9f1719;
+    color: #0099ff;
     margin-top: 10px;
     font-size: 2.3rem;
     font-size: 2.3em;
@@ -158,14 +158,14 @@ h2 {
 body.ak-pagetype-petition button.ak-submit-button,
 button.ak-submit-button,
 button{
-    background-color: #9f1719;
+    background-color: #0099ff;
     border-radius: 0;
     transition: .2s;
     width: auto;
     padding-left:30px;
     padding-right:30px;
     border: 1px solid #fff;
-    outline: 2px solid #9f1719;
+    outline: 2px solid #0099ff;
     font-weight: 600;
     font-size:1.3rem;
     font-size:1.3em;
@@ -221,7 +221,7 @@ button{
 
 .ak-pagetype-petition .statement-text-wrapper.ak-field-box
 {
-    border: 1px solid #a01816;
+    border: 1px solid #0099ff;
 }
 
 .ak-pagetype-letter .ak-grid-col:first-child,
@@ -241,7 +241,7 @@ button{
 }
 
 .ak-pagetype-letter #letter-form{
-    border: 1px solid #a01816;
+    border: 1px solid #0099ff;
 }
 
 #known_user, .known_user {
@@ -318,7 +318,7 @@ textarea#id_comment{
 }
 
 .click-here-to-sign a {
-    color: #a31105;
+    color: #0099ff;
     font-weight: 600;
     font-size: 1.3rem; 
     font-size: 1.3em; 
@@ -505,7 +505,7 @@ color: #fff;
 }
 
 #copyright li a i:hover{
-    color: #9f1719;
+    color: #0099ff;
 }
 
 
