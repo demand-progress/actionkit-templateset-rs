@@ -17,7 +17,7 @@
 	
 	{% if page.type == "Petition" or page.type == "Letter" %}
 	    {% with custom_image_url=page.custom_fields.image_url %}
-            <meta property="og:image" content="{{ page.followup.share_image_value|default:custom_image_url|default:"https://s3.amazonaws.com/demandprogress/images/add-your-name.png" }}" />
+            <meta property="og:image" content="{{ page.followup.share_image_value|default:custom_image_url|default:"https://s3.amazonaws.com/demandprogress/images/fb-meta-addyourname.png" }}" />
         {% endwith %}
     {% else %}
 	    {% with custom_image_url=page.custom_fields.image_url %}
