@@ -151,7 +151,7 @@ h2 {
 
 .statement-text-wrapper {
     border-radius: 0;
-    border: 1px solid #a01618;
+    border: 1px solid #004a7a;
     background: #f0f0f0;
 }
 
@@ -221,7 +221,7 @@ button{
 
 .ak-pagetype-petition .statement-text-wrapper.ak-field-box
 {
-    border: 1px solid #00426e;
+    border: 1px solid #004a7a;
 }
 
 .ak-pagetype-letter .ak-grid-col:first-child,
@@ -241,7 +241,7 @@ button{
 }
 
 .ak-pagetype-letter #letter-form{
-    border: 1px solid #0099ff;
+    border: 1px solid #004a7a;
 }
 
 #known_user, .known_user {
